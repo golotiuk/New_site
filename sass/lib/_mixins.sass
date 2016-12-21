@@ -293,15 +293,15 @@
 =check($width, $height, $png)   
 	position: absolute
 	clip: rect(0, 0, 0, 0)
-	&:checked + label:after 
-		background-position: 0 $height
+	&:checked + label:before 
+		background-position: 0 (-$height)
 	& + label 
 		cursor: pointer
-		&:after 
+		&:before 
 			content: " "
 			display: inline-block
 			position: relative
-			top: 2px
+			top: 5px
 			height: $height
 			width: $width
 			margin-right: 10px
